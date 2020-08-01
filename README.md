@@ -18,7 +18,7 @@ sudo mysql
 ```bash
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
 ```
-Password policy problem
+Password policy problem for MySQL 8
 ```bash
 SET GLOBAL validate_password.LENGTH = 4;
 SET GLOBAL validate_password.policy = 0;
