@@ -29,3 +29,7 @@ SET GLOBAL validate_password.check_user_name = 0;
 ALTER USER 'user'@'localhost' IDENTIFIED BY 'pass';
 FLUSH PRIVILEGES;
 ```
+
+
+##index.php Codeigniter
+https://stackoverflow.com/questions/14783666/codeigniter-htaccess-and-url-rewrite-issues/14807463
