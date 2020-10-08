@@ -31,8 +31,8 @@ FLUSH PRIVILEGES;
 ```
 
 
-##index.php Codeigniter
+## index.php Codeigniter
 https://stackoverflow.com/questions/14783666/codeigniter-htaccess-and-url-rewrite-issues/14807463
 
-##Upload File
+## Upload File
 sudo chown -R www-data uploads/
