@@ -31,10 +31,15 @@ FLUSH PRIVILEGES;
 ```
 
 
-## index.php Codeigniter
+## Remove index.php Codeigniter
 https://stackoverflow.com/questions/14783666/codeigniter-htaccess-and-url-rewrite-issues/14807463
 
 ## Upload File
 ```bash
 sudo chown -R www-data uploads/
+```
+
+## CRONTAB
+```bash
+chmod +x file.sh
 ```
