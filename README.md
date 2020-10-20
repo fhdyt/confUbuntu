@@ -11,14 +11,16 @@ sudo apt-get remove dbconfig-mysql
 sudo apt-get dist-upgrade
 sudo apt-get install mysql-server
 ```
-Reset Password MySQL
+
+## Reset Password MySQL
 ```bash
 sudo mysql
 ```
 ```bash
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
 ```
-Password policy problem for MySQL 8
+
+## Password policy problem for MySQL 8
 ```bash
 SET GLOBAL validate_password.LENGTH = 4;
 SET GLOBAL validate_password.policy = 0;
@@ -29,7 +31,6 @@ SET GLOBAL validate_password.check_user_name = 0;
 ALTER USER 'user'@'localhost' IDENTIFIED BY 'pass';
 FLUSH PRIVILEGES;
 ```
-
 
 ## Remove index.php Codeigniter
 https://stackoverflow.com/questions/14783666/codeigniter-htaccess-and-url-rewrite-issues/14807463
@@ -42,4 +43,31 @@ sudo chown -R www-data uploads/
 ## CRONTAB
 ```bash
 chmod +x file.sh
+```
+
+## MYSQLDUMP
+```bash
+mysqldump -u <username> -p<password> <DATABASE> > backup_db_`date '+%Y-%m-%d@%H:%M'`.sql
+```
+
+## Virtual Host
+```bash
+<VirtualHost *:80>
+    ServerName arunikaku.site
+    ServerAlias www.arunikaku.site
+    ServerAdmin webmaster@example.com
+    DocumentRoot /var/www/html/arunikaku
+    
+    <Directory /var/www/html/arunikaku>
+        Options -Indexes +FollowSymLinks
+        AllowOverride All
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/example.com-error.log
+    CustomLog ${APACHE_LOG_DIR}/example.com-access.log combined
+# RewriteEngine on
+# RewriteCond %{SERVER_NAME} =arunikaku.site [OR]
+# RewriteCond %{SERVER_NAME} =www.arunikaku.site
+# RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+</VirtualHost>
 ```
