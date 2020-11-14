@@ -72,12 +72,12 @@ mysqldump -u username -ppassword_anda NAMA_DATABASE > backup_db_`date '+%Y-%m-%d
 </VirtualHost>
 ```
 ## Tambah ssh key baru ke Server
-Buka terminal pada perangkat yang akan diberi akses
+- Buka terminal pada perangkat yang akan diberi akses
 ```bash
 ssh-keygen
 ```
-Nama harus 'id_rsa'
-Pindahkan hasil keygen ke folder
+- Nama harus 'id_rsa'
+- Pindahkan hasil keygen ke folder
 ```bash
 ~/.ssh/id_rsa
 ```
