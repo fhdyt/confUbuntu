@@ -1,4 +1,4 @@
-# Configuration Ubuntu
+# Konfigurasi Penting !!!
 
 ## MySQL
 Reinstall MySQL
@@ -32,22 +32,22 @@ ALTER USER 'user'@'localhost' IDENTIFIED BY 'pass';
 FLUSH PRIVILEGES;
 ```
 
-## Remove index.php Codeigniter
+## Menghilangkan index.php Codeigniter
 https://stackoverflow.com/questions/14783666/codeigniter-htaccess-and-url-rewrite-issues/14807463
 
-## Upload File
+## Akses Folder untuk Upload File
 ```bash
 sudo chown -R www-data uploads/
 ```
 
-## CRONTAB
+## Akses file Crontab
 ```bash
 chmod +x file.sh
 ```
 
-## MYSQLDUMP
+## Perintah MYSQLDUMP melalui terminal
 ```bash
-mysqldump -u <username> -p<password> <DATABASE> > backup_db_`date '+%Y-%m-%d@%H:%M'`.sql
+mysqldump -u username -ppassword_anda NAMA_DATABASE > backup_db_`date '+%Y-%m-%d@%H:%M'`.sql
 ```
 
 ## Virtual Host
