@@ -71,3 +71,16 @@ mysqldump -u <username> -p<password> <DATABASE> > backup_db_`date '+%Y-%m-%d@%H:
 # RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 </VirtualHost>
 ```
+## Tambah ssh key baru ke Server
+Buka terminal pada perangkat yang akan diberi akses
+```bash
+ssh-keygen
+```
+Nama harus 'id_rsa'
+Pindahkan hasil keygen ke folder
+```bash
+~/.ssh/id_rsa
+```
+```bash
+ssh-copy-id ['user']@['ip_server']
+```
