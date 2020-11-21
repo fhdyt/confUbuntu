@@ -20,6 +20,20 @@ sudo mysql
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
 ```
 
+## Menambah user baru MySQL
+```bash
+sudo mysql -u root -p
+```
+```bash
+CREATE USER 'newuser'@'%' IDENTIFIED BY 'password';
+```
+```bash
+GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'%';
+```
+```bash
+FLUSH PRIVILEGES;
+```
+
 ## Password policy problem for MySQL 8
 ```bash
 SET GLOBAL validate_password.LENGTH = 4;
