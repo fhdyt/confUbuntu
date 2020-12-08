@@ -15,7 +15,7 @@ public function add_quote_model()
 	$data = array(
 		'QUOTE' => $this->input->post('quote'),
 		'QUOTE_SLUG' => $slug,
-);
+	);
 
 $result=$this->db->insert('QUOTE',$data);
 return $result;
@@ -29,21 +29,21 @@ return $result;
 
 ## Ajax
 ```bash
-function save_quote(){
-  $.ajax({
-    type : "POST",
-    url  : "<?php echo base_url() ?>index.php/quote/add_quote",
-    dataType : "JSON",
-    data : {
+function save_quote()
+{
+$.ajax({
+	type : "POST",
+	url  : "<?php echo base_url() ?>index.php/quote/add_quote",
+	dataType : "JSON",
+	data : {
 		quote : $('.quote').val(),
-    },
-    success: function(data)
-    {
-      $("#myModal").modal("hide");
-	  quote_list();
-    }
-  });
+	},
+	success: function(data)
+	{
+		$("#myModal").modal("hide");
+		quote_list();
+	}
+});
 }
 
 ```
-

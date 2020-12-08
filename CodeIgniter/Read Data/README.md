@@ -67,18 +67,18 @@ function quote_list()
 				var no = 1
 				for (i = 0; i < data.length; i++) {
 					$("tbody#zone_data").append("<tr>" +
-						"<td >" + no++ +"</td>" +
-						"<td >" + data[i].QUOTE + "</td>" +
-						"<td >" + data[i].QUOTE_SLUG + "</td>" +
+					"<td >" + no++ +"</td>" +
+					"<td >" + data[i].QUOTE + "</td>" +
+					"<td >" + data[i].QUOTE_SLUG + "</td>" +
 					"<td><a class='btn btn-danger btn-sm hapus' id='" + data[i].QUOTE_INDEX + "'><i class='fas fa-trash'></i></a></td>" +
 					"<td><a class='btn btn-primary btn-sm copy' texttocopy='"+data[i].QUOTE+"'><i class='fas fa-copy'></i></a></td>" +
 					"</tr>");
 				}
 			}
 		},
-    error: function(x, e) {
-      console.log("Gagal")
-    } //end error
+		error: function(x, e) {
+			console.log("Gagal")
+		}
 	});
 }
 ```
