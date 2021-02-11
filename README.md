@@ -99,7 +99,7 @@ ssh-keygen
 ssh-copy-id ['user']@['ip_server']
 ```
 
-## Sisa disk Debian(Digitalocean)
+## Sisa disk Debian (Digitalocean)
 ```bash
 df -h
 ```
