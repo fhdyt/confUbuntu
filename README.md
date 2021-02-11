@@ -98,3 +98,8 @@ ssh-keygen
 ```bash
 ssh-copy-id ['user']@['ip_server']
 ```
+
+## Sisa disk Debian(Digitalocean)
+```bash
+df -h
+```
