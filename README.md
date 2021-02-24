@@ -103,3 +103,17 @@ ssh-copy-id ['user']@['ip_server']
 ```bash
 df -h
 ```
+
+## Codeigniter 4
+```bash
+composer create-project codeigniter4/appstarter ci-project -vvv
+```
+```bash
+composer install -vvv
+```
+```bash
+composer install
+```
+```bash
+php spark serve
+```
