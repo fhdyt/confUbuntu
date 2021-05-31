@@ -117,3 +117,8 @@ composer install
 ```bash
 php spark serve
 ```
+
+## Looping
+```bash
+while sleep 1; do echo $(date); done
+```
