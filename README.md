@@ -63,6 +63,10 @@ chmod +x file.sh
 ```bash
 mysqldump -u username -ppassword_anda NAMA_DATABASE > backup_db_`date '+%Y-%m-%d@%H:%M'`.sql
 ```
+## Import SQL File ke Database
+```bash
+mysql -u username -p NAMA_DATABASE < file.sql
+```
 
 ## Virtual Host
 ```bash
