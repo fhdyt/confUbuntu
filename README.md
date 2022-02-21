@@ -126,3 +126,8 @@ php spark serve
 ```bash
 while sleep 1; do echo $(date); done
 ```
+
+## Rsync
+```bash
+rsync -avz root@[ip]:/var/www/html /home/fikri/Documents/digitaloceean/ --delete
+```
