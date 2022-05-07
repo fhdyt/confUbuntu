@@ -131,3 +131,14 @@ while sleep 1; do echo $(date); done
 ```bash
 rsync -avz root@[ip]:/var/www/html /home/fikri/Documents/digitaloceean/ --delete
 ```
+
+## Sessions Error
+```bash
+Message: session_write_close(): Failed to write session data (user). Please verify that the current setting of session.save_path is correct (/var/lib/php/sessions)
+```
+
+```bash
+cd /var/lib/php/sessions/
+sudo find . -name "ci_*" -print |sudo xargs rm -v
+sudo find . -name "cises*" -print |sudo xargs rm -v
+```
