@@ -1,4 +1,4 @@
-# Konfigurasi Penting !!!
+# Konfigurasi !!!
 
 ## MySQL
 Reinstall MySQL
@@ -130,6 +130,18 @@ while sleep 1; do echo $(date); done
 ## Rsync
 ```bash
 rsync -avz root@[ip]:/var/www/html /home/fikri/Documents/digitaloceean/ --delete
+```
+
+## Remote MariaDB
+```bash
+nano /etc/mysql/mariadb.conf.d/50-server.cnf
+```
+add line
+```bash
+bind-address = [ip server]
+```
+```bash
+systemctl restart mysql
 ```
 
 ## Sessions Error
