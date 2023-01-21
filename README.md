@@ -154,3 +154,22 @@ cd /var/lib/php/sessions/
 sudo find . -name "ci_*" -print |sudo xargs rm -v
 sudo find . -name "cises*" -print |sudo xargs rm -v
 ```
+
+## Virtual Host App
+```bash
+<VirtualHost *:80>
+    ServerName domain.com
+    ServerAlias www.domain.com
+
+    ProxyRequests Off
+    ProxyPreserveHost On
+    ProxyVia Full
+
+    <Proxy *>
+        Require all granted
+    </Proxy>
+
+    ProxyPass / http://127.0.0.1:3000/
+    ProxyPassReverse / http://127.0.0.1:3000/
+</VirtualHost>
+```
