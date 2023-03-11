@@ -89,6 +89,38 @@ mysql -u username -p NAMA_DATABASE < file.sql
 # RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 </VirtualHost>
 ```
+## Virtual Host VueRouter
+```bash
+<VirtualHost *:80>
+    ServerName admin.rare-user.com
+    ServerAdmin webmaster@example.com
+    DocumentRoot /var/www/html/admin-rare-user
+    
+    <Directory /var/www/html/rare-user>
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride All
+	Require all granted
+    </Directory>
+FallbackResource /index.html
+</VirtualHost>
+```
+## Virtual Host Nodejs
+```bash
+<VirtualHost *:80>
+    ServerName api.rare-user.com
+
+    ProxyRequests Off
+    ProxyPreserveHost On
+    ProxyVia Full
+
+    <Proxy *>
+        Require all granted
+    </Proxy>
+
+    ProxyPass / http://127.0.0.1:3000/
+    ProxyPassReverse / http://127.0.0.1:3000/
+</VirtualHost>
+```
 ## Tambah ssh key baru ke Server
 - Buka terminal pada perangkat yang akan diberi akses
 ```bash
