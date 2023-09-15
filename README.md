@@ -173,6 +173,9 @@ add line
 bind-address = [ip server]
 ```
 ```bash
+sudo ufw allow 3306/tcp
+```
+```bash
 systemctl restart mysql
 ```
 
